@@ -73,6 +73,6 @@ public class Pizza {
         "Extra Cheese Added:"+" "+cheese*80+"\n"+
         "Extra Toppings Added:"+" "+ topping*topping_price+"\n"+
         "Paperbag Added: 20"+"\n"+
-        "Total Price:"+" "+ (price+cheese*80+topping_price*topping+extra_bag);
+        "Total Price:"+" "+ (this.price+this.cheese*80+this.topping_price*this.topping+this.extra_bag);
     }
 }
