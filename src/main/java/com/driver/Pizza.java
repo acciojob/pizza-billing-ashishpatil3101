@@ -15,16 +15,17 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         this.flag_takeway=false;
-        this.cheese=1;
-        this.topping = 1;
+        this.cheese+=80;
+        this.topping = 0;
         if(isVeg==true) {
             this.topping_price = 70;
             this.price = 300;
-
+            this.topping +=70;
         }
         else{
             this.topping_price = 120;
             this.price = 400;
+            this.topping +=120;
         }
     }
 
@@ -51,12 +52,12 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        this.cheese+=1;
+        this.cheese+=80;
     }
 
     public void addExtraToppings(){
         // your code goes here
-        this.topping+=1;
+        this.topping+=this.topping_price;
     }
 
     public void addTakeaway(){
@@ -70,9 +71,9 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         return "Base Price Of The Pizza:"+" "+price+"\n"+
-        "Extra Cheese Added:"+" "+cheese*80+"\n"+
-        "Extra Toppings Added:"+" "+ topping*topping_price+"\n"+
+        "Extra Cheese Added:"+" "+cheese+"\n"+
+        "Extra Toppings Added:"+" "+ topping+"\n"+
         "Paperbag Added: 20"+"\n"+
-        "Total Price:"+" "+ (this.price+this.cheese*80+this.topping_price*this.topping+this.extra_bag);
+        "Total Price:"+" "+ (this.price+this.cheese+this.topping+this.extra_bag);
     }
 }
