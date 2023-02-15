@@ -11,5 +11,17 @@ public class Main {
 
 
     System.out.println(p.getBill());
+
+
+    DeluxePizza p1=new DeluxePizza(false);
+    p1.addExtraCheese();
+    p1.addExtraToppings();
+    p1.addExtraToppings();
+    p1.addExtraCheese();
+    p1.addExtraToppings();
+
+
+    System.out.println(p1.getBill());
+
   }
 }
